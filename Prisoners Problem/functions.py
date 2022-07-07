@@ -1,4 +1,5 @@
 import random
+import matplotlib.pyplot as plt
 
 def CreateRoom(seed):
     array2 = list(range(1, 101))
@@ -28,3 +29,9 @@ def PlayGame(room):
 
         if OpenBox(i, i, steps, room) > 50:
             return 0
+
+def CreatePlot(x,y):
+    plt.xlabel('# of games played')
+    plt.ylabel('winrate')
+    plt.plot(x, y)
+    plt.savefig('testplot.png')

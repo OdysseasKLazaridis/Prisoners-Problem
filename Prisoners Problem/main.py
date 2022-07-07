@@ -1,18 +1,18 @@
-from room import CreateRoom, OpenBox, PlayGame
+from functions import CreateRoom, OpenBox, PlayGame ,CreatePlot
 import numpy as np # installed with matplotlib
-import matplotlib.pyplot as plt
 import time
 
 if __name__ == '__main__':
 
     wins = 0
     reps = 3000
-    tic = time.perf_counter()
+    #tic = time.perf_counter()
 
     x = np.array([0])
     y = np.array([0])
 
-    for i in range(1,reps+1): 
+    for i in range(1,reps+1): #Η λούπα που κατασκεβάζει τα δωμάτια
+
         room = CreateRoom(i+30000)
         if PlayGame(room) == 1:
             wins += 1
@@ -21,14 +21,11 @@ if __name__ == '__main__':
         x = np.append(x, i)
         y = np.append(y, winrate)
 
+    CreatePlot(x,y)
 
-    plt.xlabel('# of games played')
-    plt.ylabel('winrate')
-    plt.plot(x, y)
-    plt.savefig('testplot.png')
 
-    toc = time.perf_counter()
-    print(toc - tic)
+    #toc = time.perf_counter()
+    #print(toc - tic)
 
     winrate = wins / reps
     print(winrate)
