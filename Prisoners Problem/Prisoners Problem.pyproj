@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>53d4d25e-b86a-4de3-8d36-19c30c28aa90</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Prisoners_Problem.py</StartupFile>
+    <StartupFile>main.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,8 +21,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="SearchForLoops.py" />
-    <Compile Include="Prisoners_Problem.py" />
+    <Compile Include="main.py" />
+    <Compile Include="room.py" />
+    <Compile Include="Prisoners_Problem%28Beta%29.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
